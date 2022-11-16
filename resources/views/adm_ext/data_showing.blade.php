@@ -64,6 +64,7 @@ Showing
                                     onclick="return confirm('Data akan dihapus! apakah ok?')" class="btn btn-danger"><i
                                         class="fa fa-trash"></i></a>
                             </td>
+                            {{-- edit_showing --}}
                             <div class="modal fade" id="editData{{$item->id_show}}" tabindex="-1" role="dialog"
                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-lg" role="document">
@@ -93,7 +94,7 @@ Showing
                                                             1</label>
                                                         <input class="form-control" type="file" id=""
                                                             name="foto_satwa1_up" accept="image/*"
-                                                            value="{{ $item->foto_show1 }}">
+                                                            value="{{ $item->foto_show1 }}" required>
                                                         <small id="helpId" class="form-text text-muted"></small>
                                                     </div>
                                                     <div class="mb-3 col-sm-12">
@@ -101,7 +102,7 @@ Showing
                                                             2</label>
                                                         <input class="form-control" type="file" id=""
                                                             name="foto_satwa2_up" accept="image/*"
-                                                            value="{{ $item->foto_show2 }}">
+                                                            value="{{ $item->foto_show2 }}" required>
                                                         <small id="helpId" class="form-text text-muted"></small>
                                                     </div>
                                                     <div class="mb-3 col-sm-12">
@@ -109,7 +110,7 @@ Showing
                                                             3</label>
                                                         <input class="form-control" type="file" id=""
                                                             name="foto_satwa3_up" accept="image/*"
-                                                            value="{{ $item->foto_show3 }}">
+                                                            value="{{ $item->foto_show3 }}" required>
                                                         <small id="helpId" class="form-text text-muted"></small>
                                                     </div>
 

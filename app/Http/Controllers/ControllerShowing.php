@@ -21,7 +21,7 @@ class ControllerShowing extends Controller
 
             $response = DB::table('t_showing')
                 ->select('*')
-                ->join('t_satwa', 't_satwa.id_satwa', '=', 't_showing.id_satwa')
+                ->leftJoin('t_satwa', 't_satwa.id_satwa', '=', 't_showing.id_satwa')
                 ->join('r_ras', 'r_ras.id_ras', '=', 't_satwa.ras')
                 ->get();
 
@@ -86,6 +86,11 @@ class ControllerShowing extends Controller
                     $file3->move($tujuan_upload3, $nama_file3);
                     // return $size;
                     $path_mtools3 = $tujuan_upload3 . $nama_file3;
+                }
+
+                if ($request->keterangan_showing == null) {
+                    Alert::error('Tolong Isi Field Keterangan!!');
+                    return redirect('adm_ext_showing');
                 }
 
                 $update_at = new Controller;

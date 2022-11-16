@@ -73,7 +73,7 @@ class ControllerSupport extends Controller
             ->leftJoin('t_satwa', 't_showing.id_satwa', '=', 't_satwa.id_satwa')
             ->join('r_ras', 't_satwa.ras', '=', 'r_ras.id_ras')
             ->where('t_showing.status_show', 1)
-            ->get();
+            ->paginate(9);
 
         return view('showing', compact('response'));
     }

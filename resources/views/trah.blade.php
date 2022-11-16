@@ -65,15 +65,6 @@ Trah
             <div class="card-body p-3">
               <div class="row">
                 {{-- --}}
-                <div class="col-lg-6 col-sm-12 ms-auto text-center mt-5 mt-lg-0">
-                  <p class="mb-1 pt-1 text-bold" id="nama_ras"></p>
-                  <div class="bg-gradient-light border-radius-lg">
-                    <div class="position-relative d-flex align-items-center justify-content-center foto_satwa">
-                      <div id="foto_satwa"></div>
-                    </div>
-                  </div>
-                </div>
-                {{-- --}}
                 <div class="col-lg-6 col-sm-12">
                   <div class="d-flex flex-column h-100">
                     <h5 class="font-weight-bolder mt-2" id="nama_satwa"><i class="fa fa-arrow-left"></i> Select Trah
@@ -98,6 +89,16 @@ Trah
                         <div class="col-4" id="j_induk_betina"></div>
                         <div class="col-8" id="induk_betina"></div>
                       </div>
+                    </div>
+                  </div>
+                </div>
+                {{-- --}}
+
+                <div class="col-lg-6 col-sm-12 ms-auto text-center mt-5 mt-lg-0">
+                  <p class="mb-1 pt-1 text-bold" id="nama_ras"></p>
+                  <div class="bg-gradient-light border-radius-lg">
+                    <div class="position-relative d-flex align-items-center justify-content-center foto_satwa">
+                      <div id="foto_satwa"></div>
                     </div>
                   </div>
                 </div>
@@ -262,7 +263,7 @@ Trah
                   } else {
                   $("#vaccine").append(': No');
                   }
-                  $("#foto_satwa").append('<img class="position-inline z-index-2 pt-4 py-4" src="https://airartikennels.co.id/'+item.foto_satwa+'" style="heigth:50% !Important; width:90% !important;" alt="satwa">');
+                  $("#foto_satwa").append('<img class="position-inline z-index-2 pt-4 py-4" src="http://localhost:8000/'+item.foto_satwa+'" style="heigth:50% !Important; width:90% !important;" alt="satwa">');
                   // $("#test").append('cek');
                   // console.log(data);
                 });
@@ -409,7 +410,7 @@ Trah
                 } else {
                 $("#vaccine").append(': No');
                 }
-                $("#foto_satwa").append('<img class="position-inline z-index-2 pt-4 py-4" src="https://airartikennels.co.id/'+item.foto_satwa+'" style="heigth:50% !Important; width:90% !important;" alt="satwa">');
+                $("#foto_satwa").append('<img class="position-inline z-index-2 pt-4 py-4" src="http://localhost:8000/'+item.foto_satwa+'" style="heigth:50% !Important; width:90% !important;" alt="satwa">');
                 // $("#test").append('cek');
                 // console.log(data);
                 });

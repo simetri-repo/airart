@@ -19,7 +19,7 @@ Showing
         <div class="col-lg-4 col-md-6 mt-1 mb-3 list-item">
           <div class="card h-100 p-3">
             <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100"
-              style="background-image: url('{{ asset('http://localhost:8000/'. $show->foto_show1) }}');">
+              style="background-image: url('{{ asset('http://localhost:8000/'. $show->foto_satwa) }}');">
               <span class="mask bg-gradient-dark"></span>
               <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
                 <h5 class="text-white font-weight-bolder mb-4 pt-2">{{ $show->nama_satwa }}</h5>
@@ -106,11 +106,9 @@ Showing
       </div>
     </div>
     {{-- paging --}}
-    <div id="pagination-container" class="mt-3">
+    <div id="pagination-container" class="mt-3 d-flex justify-content-center">
 
-
-      {{-- ------------------------------------ --}}
-
+      {{ $response->links() }}
 
     </div>
   </div>
@@ -155,7 +153,7 @@ Showing
   </style>
   @endsection
 
-  @section('script')
+  {{-- @section('script')
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>
@@ -179,4 +177,4 @@ Showing
     });
   </script>
 
-  @endsection
+  @endsection --}}
